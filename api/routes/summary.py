@@ -84,6 +84,7 @@ async def generate_summary(request: Dict[str, Any]):
 
             return {
                 "project_summary": response.text,
+                "srs_text": SRS_text,  # Include the parsed SRS content in the response
                 "status": "success"
             }
 

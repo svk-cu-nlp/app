@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .routes import summary
+from .routes import summary, features
 
 app = FastAPI(
     title="SRS Analysis API",
@@ -19,3 +19,4 @@ app.add_middleware(
 
 # Include routers
 app.include_router(summary.router)
+app.include_router(features.router)
