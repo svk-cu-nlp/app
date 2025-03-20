@@ -23,3 +23,12 @@ class FeatureReEvaluationRequest(BaseModel):
 class FeatureResponse(BaseModel):
     feature_details: str
     status: str = "success"
+
+class RiskAnalysisRequest(BaseModel):
+    features: str
+    srs_content: str
+    project_summary: str
+
+class RiskAnalysisResponse(BaseModel):
+    risk_analysis: str
+    status: str = "success"
